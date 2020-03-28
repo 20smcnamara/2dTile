@@ -17,7 +17,7 @@ TileTypes = {"grass_image": pyglet.image.load('Resources/grass.png'),
              "FBbush_image": pyglet.image.load('Resources/FBbush.png'),
              "NBbush_image": pyglet.image.load('Resources/NBbush.png')}
 keys = []
-baseURL = "http://90e32795.ngrok.io/GameData/"
+baseURL = "http://7f61b73e.ngrok.io/GameData/"
 tile_size = int(height / 22)
 
 
@@ -491,6 +491,7 @@ def on_draw():
 
 @window.event
 def on_close():
+    pyglet.app.exit()
     disconnect()
 
 
