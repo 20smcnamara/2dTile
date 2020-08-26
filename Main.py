@@ -36,6 +36,9 @@ class drawnObject:
     def __init__(self):
         self.cord = [0, 0]
 
+    def draw(self):
+        pass
+
 
 class Bullet(drawnObject):
 
@@ -147,15 +150,13 @@ class Tile(drawnObject):
         self.cords = [x, y]
         self.size = tile_size
         self.type = type
-        self.maxHealth = 10
-        self.health = self.maxHealth
 
     def draw(self):
         x, y = self.cords
         TileTypes[self.type].blit(x, y)
 
     def use(self):
-        return "0H"
+        pass
 
 class BushTile(Tile):
 
